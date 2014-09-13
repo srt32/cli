@@ -29,6 +29,7 @@ const (
 	descConfigure = "Writes config values to a JSON file."
 	descDemo      = "Fetches a demo problem for each language track on exercism.io."
 	descFetch     = "Fetches your current problems on exercism.io, as well as the next unstarted problem in each language."
+	descOpen      = "open it up"
 	descRestore   = "Restores completed and current problems on from exercism.io, along with your most recent iteration for each."
 	descSubmit    = "Submits a new iteration to a problem on exercism.io."
 	descUnsubmit  = "Deletes the most recently submitted iteration."
@@ -121,6 +122,11 @@ func main() {
 			ShortName: "o",
 			Usage:     descLogout,
 			Action:    handlers.Logout,
+		},
+		{
+			Name: "open",
+			Usage: descOpen,
+			Action: handlers.Open,
 		},
 		{
 			Name:        "restore",
